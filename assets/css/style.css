@@ -1,0 +1,540 @@
+/* ----------------------------------------- */
+/* IMPORT FONTS */
+/* ----------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;1,300&display=swap');
+
+/* ----------------------------------------- */
+/* RESET CSS */
+/* ----------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----------------------------------------- */
+/* GLOBAL CSS */
+/* ----------------------------------------- */
+:root {
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --dark-gray: hsl(0, 0%, 55%);
+    --very-dark-gray: hsl(0, 0%, 41%);
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Josefin Sans';
+    text-transform: uppercase;
+    font-weight: normal;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 3rem;
+    letter-spacing: 1px;
+}
+
+p,
+a {
+    font-family: "Alata", Arial, Helvetica, sans-serif;
+    font-size: 0.938rem;
+}
+
+li {
+    list-style: none;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 2rem;;
+}
+
+.display-none {
+    display: none;
+}
+
+/* Styles for anchor links in the <nav> element and social icons (.social-icons) */
+header a:hover::after,
+footer a:hover::after,
+.burger-menu a:hover::after {
+    border: solid 1px var(--white);
+    width: 50%;
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+/* Styles for anchor links in the <nav> element */
+header nav a:hover::after,
+footer nav a:hover::after {
+    margin: 0.5rem 0 0 25%;
+}
+
+/* **************************************************************************** */
+/* ***** HEADER PART ***** */
+header {
+    background-image: url('../images/desktop/image-hero.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--white);
+    padding: 4rem 0;
+    height: 40rem;
+}
+
+header a {
+    color: var(--white);
+}
+
+header nav ul {
+    display: flex;
+    gap: 2.4rem;
+}
+
+.logo-nav {
+    display: flex;
+    justify-content: space-between;
+    height: 5vh;
+}
+
+.logo-nav img {
+    width: 12rem;
+    height: 2rem;
+}
+
+.slogan {
+    border: solid 2.5px var(--white);
+    width: 58%;
+    padding: 2rem 2rem 1.1rem 2rem;
+    margin-top: 7rem
+}
+
+h1 {
+    letter-spacing: 1px;
+    font-size: 4.5rem;
+    font-weight: normal;
+}
+
+/* ----------------------------------------- */
+/* BURGER MENU */
+/* ----------------------------------------- */
+/* Hide default mobile menu */
+.burger-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 4rem 2rem;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+/* Display menu when activated */
+.burger-menu.active {
+    display: block;
+}
+
+/* Mobile menu link style */
+.burger-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 35%;
+    text-transform: uppercase;
+    color: var(--very-dark-gray);
+}
+
+.burger-menu a {
+    font-size: 1.5rem;
+    color: var(--white);
+    font-family: "Josefin Sans";
+}
+
+.burger-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.burger-icon img {
+    width: 1.875rem;
+    height: 1.875rem;
+}
+
+/* Styles for the mobile menu's closing cross */
+.close-icon {
+    position: absolute;
+    top: 70px;
+    right: 38px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Show cross when menu is active */
+.burger-menu.active .close-icon {
+    display: block;
+}
+
+.close-icon img {
+    width: 1.563rem;
+    height: 1.563rem;
+}
+
+/* **************************************************************************** */
+/* ***** MAIN PART ***** */
+/* ----------------------------------------- */
+/* FIRST SECTION */
+/* ----------------------------------------- */
+.first-section {
+    display: flex;
+    position: relative;
+    margin: 6.5rem 0;
+}
+
+.first-section h2 {
+    margin-bottom: 2rem;
+}
+
+.first-section p {
+    color: var(--very-dark-gray);
+    line-height: 1.5;
+}
+
+.first-section-text {
+    position: absolute;
+    background-color: var(--white);
+    width: 32.563rem;
+    height: 19.063rem;
+    padding: 5rem 0 0 5rem;
+    top: 39.5%;
+    left: 52%;
+}
+
+/* ----------------------------------------- */
+/* SECOND SECTION */
+/* ----------------------------------------- */
+.second-section {
+    margin-bottom: 6.5rem;
+}
+
+.title-btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3.5rem;
+}
+
+.button {
+    border: solid 1px var(--black);
+    text-transform: uppercase;
+    color: var(--black);
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+    width: 9rem;
+    height: 2.5rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button a {
+    color: var(--black);
+}
+
+.button:hover {
+    background-color: var(--black);
+}
+
+.button:hover a {
+    color: var(--white);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.8rem;
+}
+
+/* Position h3 in relation to image */
+.grid-container div {
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-container h3 {
+    position: absolute;
+    bottom: 35px;
+    left: 35px;
+    color: var(--white);
+    letter-spacing: 1px;
+    font-size: 2rem;
+    width: 12rem;
+}
+
+.grid-container img {
+    width: 100%;
+    height: auto;
+    filter: brightness(0.8);
+}
+
+/* To put the h3 "THE GRID" in two lines */
+.second-section .grid-container div:nth-of-type(4) h3 {
+    width: 6rem;
+}
+
+.grid-container div:hover img {
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.grid-container div:hover h3 {
+    color: var(--black);
+    cursor: pointer;
+}
+
+.mobile-btn {
+    display: none;
+}
+
+/* **************************************************************************** */
+/* ***** FOOTER PART ***** */
+footer {
+    background-color: var(--black);
+    padding: 2rem 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer a {
+    color: var(--white);
+}
+
+footer p {
+    color: var(--very-dark-gray);
+}
+
+.social-icons ul {
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.social-icons a:hover::after {
+    width: 100%;
+    margin-top: 0.1rem;
+}
+
+.social-icons img {
+    width: 1.625rem;
+    height: 1.625rem;
+}
+
+footer nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-left img {
+    margin-bottom: 1rem;
+    width: 9rem;
+    height: 1.5rem;
+}
+
+/* **************************************************************************** */
+/* ----------------------------------------- */
+/* RESPONSIVE DESIGN */
+/* ----------------------------------------- */
+/* Styles for screens 1150px and smaller */
+@media (max-width: 1150px) {
+    .wrap {
+        max-width: 850px;
+        margin: 0 auto;
+    }
+
+    /* ***** HEADER PART ***** */
+    h1 {
+        font-size: 3.5rem
+    }
+
+    /* ***** MAIN PART ***** */
+    h2 {
+        font-size: 2rem;
+    }
+
+    .slogan {
+        width: 65%;
+    }
+
+    .first-section img {
+        width: 80%;
+    }
+
+    .first-section-text {
+        width: 23.75rem;
+        height: 15rem;
+        padding: 1.6rem 0 0 1.6rem;
+        top: 48.5%;
+        left: 55.5%;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Position the last two images */
+    /* Image on the left */
+    .grid-container div:nth-last-child(2) {
+        grid-column: 1;
+    }
+
+    /* Image on the right */
+    .grid-container div:nth-last-child(1) {
+        grid-column: 3;
+    }
+}
+
+/* Styles for screens 874px and smaller */
+@media (max-width: 874px) {
+
+    /* ***** HEADER PART ***** */
+    /* hide desktop menu on small screens */
+    .desktop-menu {
+        display: none;
+    }
+
+    /* Show burger icon on small screen */
+    .burger-icon {
+        display: block;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    /* ***** MAIN PART ***** */
+    /* Reset position of .first-section-text */
+    .first-section .first-section-text {
+        position: relative;
+        left: initial;
+        top: initial;
+        width: 80%;
+        padding: 0;
+        height: auto;
+        text-align: center;
+    }
+
+    .first-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .first-section h2 {
+        margin-top: 3.5rem;
+    }
+
+    .second-section h2 {
+        margin: 0 auto;
+    }
+
+    .title-btn-container .button {
+        display: none;
+    }
+
+    .mobile-btn {
+        display: block;
+        margin: 1.8rem auto 0;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grid-container h3 {
+        width: 16.7rem;
+    }
+
+    /* ***** FOOTER PART ***** */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-left ul li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-icons ul {
+        justify-content: center;
+        margin-top: 2rem;
+    }
+}
+
+/* Styles for screens 608px and smaller */
+@media (max-width: 608px) {
+
+    /* ***** HEADER PART ***** */
+    header {
+        background-image: url('../images/mobile/image-hero.jpg');
+        background-position: initial;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .slogan {
+        margin: 60% auto;
+        width: 100%;
+        padding: 1rem 1rem 0.55rem 1rem;
+    }
+
+    /* ***** MAIN PART ***** */
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    .grid-container h3 {
+        font-size: 1.2rem;
+        width: 8rem;
+        bottom: 15px;
+        left: 15px;
+    }
+
+    /* To put the h3 "THE GRID" in two lines */
+    .second-section .grid-container div:nth-of-type(4) h3 {
+        width: 5.5rem;
+    }
+}
