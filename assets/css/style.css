@@ -441,7 +441,7 @@ footer nav ul {
         position: relative;
         left: initial;
         top: initial;
-        width: 80%;
+        width: 100%;
         padding: 0;
         height: auto;
         text-align: center;
@@ -451,14 +451,32 @@ footer nav ul {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 5.5rem;
+        margin-bottom: 5.5rem;
+    }
+    
+    .first-section h2 {
+        margin-top: 3rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .first-section img {
+        width: 100%;
+    }
+    .first-section p {
+        padding: 0 1rem;
     }
 
-    .first-section h2 {
-        margin-top: 3.5rem;
+    .second-section {
+        margin-bottom: 5.5rem;
     }
 
     .second-section h2 {
         margin: 0 auto;
+    }
+
+    .title-btn-container {
+        margin-bottom: 3rem;
     }
 
     .title-btn-container .button {
@@ -473,6 +491,7 @@ footer nav ul {
     .grid-container {
         display: flex;
         flex-direction: column;
+        gap: 1.5rem;
     }
 
     .grid-container h3 {
